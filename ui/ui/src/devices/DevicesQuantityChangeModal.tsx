@@ -15,7 +15,7 @@ export interface DevicesQuantityChangeModalProps {
 
 export const DevicesQuantityChangeModal: FC<DevicesQuantityChangeModalProps> = ((props) => {
   const device = props.device;
-  const title = `${device?.name} ${device?.price}$ (${device?.leftInStock} in stock)`; //
+  const title = `${device?.name} ${device?.price}$ (${device?.leftInStock} in stock)`;
 
   const body = <Row>
     <Col>

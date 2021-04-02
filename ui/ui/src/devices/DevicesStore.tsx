@@ -45,17 +45,6 @@ class DevicesStore {
       await this.loadDevices();
     }
     this.setIsLoading(false);
-    /*if (this.selectedDeviceQuantity) {
-      const deviceInCart = this.cartItems.find(i => i.device.id === this.selectedDeviceQuantity?.id);
-      if (deviceInCart) {
-        this.cartItems = [{device: this.selectedDeviceQuantity, amount: deviceInCart.amount + 1},
-          ...this.cartItems.filter(i => i.device.id !== this.selectedDeviceQuantity?.id)]
-      } else {
-        this.cartItems.push({device: this.selectedDeviceQuantity, amount: 1});
-      }
-      this.showChangeDataModal = true;
-      this.changeDataText = `${this.selectedDeviceQuantity.name} quantity increased.`;
-    }*/
   }
 
   @action
@@ -67,15 +56,6 @@ class DevicesStore {
       await this.loadDevicesCart();
     }
     this.setIsLoading(false);
-    /*if (this.selectedDeviceQuantity) {
-      const deviceInCart = this.cartItems.find(i => i.device.id === this.selectedDeviceQuantity?.id);
-      if (deviceInCart) {
-        this.cartItems = [{device: this.selectedDeviceQuantity, amount: deviceInCart.amount - 1},
-          ...this.cartItems.filter(i => i.device.id !== this.selectedDeviceQuantity?.id)]
-        this.showChangeDataModal = true;
-        this.changeDataText = `${this.selectedDeviceQuantity.name} quantity decreased.`;
-      }
-    }*/
   }
 
   @action
